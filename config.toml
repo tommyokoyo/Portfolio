@@ -1,7 +1,6 @@
 baseURL = 'https://okoyo.dev/'
 languageCode = 'en-us'
 title = "Okoyo's Portofolio"
-theme = ""
 enableRobotsTXT = true
 defaultContentLanguage = "en"
 
