@@ -1,10 +1,9 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://okoyo.dev/'
 languageCode = 'en-us'
 title = "Okoyo's Portofolio"
 theme = ""
 enableRobotsTXT = true
 defaultContentLanguage = "en"
-paginate = 10
 
 [params]
   author = "Okoyo"
@@ -14,6 +13,9 @@ paginate = 10
   showMenuItems = true
   copyright = "© 2024 Okoyo"
 
+[pagination]
+  pagerSize = 10
+
 [[menu.main]]
   name = "About"
   url = "/about/"
@@ -22,17 +24,12 @@ paginate = 10
 [[menu.main]]
   name = "Blog"
   url = "/blog/"
-  weight = 1
+  weight = 2
 
 [[menu.main]]
   name = "Projects"
   url = "/projects/"
-  weight = 1
-
-[outputs]
-  home = ["HTML", "RSS"]
-  section = ["HTML"]
-  taxonomy = ["HTML"]
+  weight = 3
 
 [markup]
   [markup.goldmark.renderer]
@@ -43,3 +40,9 @@ paginate = 10
     disableJS = true
   [privacy.googleAnalytics]
     anonymizeIP = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+  taxonomy = []
+  term = []
