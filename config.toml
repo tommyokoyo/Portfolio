@@ -1,0 +1,45 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = "Okoyo's Portofolio"
+theme = ""
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+paginate = 10
+
+[params]
+  author = "Okoyo"
+  description = "This is My Portofolio"
+  showDarkModeToggler = true
+  disableScrollAnimation = true
+  showMenuItems = true
+  copyright = "© 2024 Okoyo"
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 1
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 1
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[privacy]
+  [privacy.youtube]
+    disableJS = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
