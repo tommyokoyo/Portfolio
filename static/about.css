@@ -1,0 +1,158 @@
+/* Body styling */
+body, html {
+    height: 100%;
+    background-color: #1a1a1a; /* Set a standard dark theme for the body */
+    color: #d1d1d1; /* Light text color for better contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox container */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Make the container cover the full viewport height */
+}
+
+/* Main content */
+main {
+    flex: 1; /* Allow the main content to grow and push the footer down */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    margin-top: 10px; /* Adjust the value as needed */
+}
+
+/* Navbar styling */
+nav {
+    background-color: #1a1a1a; /* Match the body color */
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px; /* Add padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 40px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 15px; /* Smaller font size */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Highlight effect */
+}
+
+/* Footer styling */
+footer {
+    background-color: #1a1a1a; /* Match the body color */
+    color: #d1d1d1;
+    text-align: center;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 12px; /* Smaller font */
+}
+
+h1 {
+    color: #d1d1d1; /* Bright titles */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.section h2 {
+    font-size: 1.6em;
+    color: #d1d1d1; /* Bright titles */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.section h3 {
+    font-size: 1.2em;
+    color: #d1d1d1; /* Subsection titles */
+    margin-bottom: 5px;
+}
+
+.section p {
+    font-size: 1.0em;
+}
+
+.section p i{
+    font-size: 0.8em;
+}
+
+/* work section */
+.section ul.work-section {
+    list-style-type: circle; /* Remove default bullets */
+}
+.section ul.work-section li {
+    font-size: 0.9em;
+}
+
+/* skills section */
+.section ul.skill-section {
+    list-style-type: circle;
+}
+
+.section ul.skill-section li {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.section ul.skill-section li strong{
+    margin-right: 6px;
+}
+
+/* contact section */
+.section ul.contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul.contact-info li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.section ul.contact-info li i {
+    margin-right: 10px; /* Space between the icon and the text */
+    color: #d1d1d1; /* Icon color */
+}
+
+.section ul.contact-info li a {
+    color: #d1d1d1; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.section ul.contact-info li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+p, ul {
+    line-height: 1.6;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #333; /* Subtle separator */
+    margin: 20px 0;
+}
