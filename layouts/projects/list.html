@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <section class="projects">
+        <div class="projects-container">
+            <h2 class="project-title">Welcome Friend...</h2>
+            <p class="project-description">These are the things I did when I had nothing to do.</p>
+            <div class="projects-grid">
+                {{ range .Pages }}
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+                    </div>
+                    <div class="project-info">
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Params.description }}</p>
+                        <a href="{{ .Params.link }}" target="_blank">
+                            github.com
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V6.41l-7.29 7.3-1.42-1.42 7.3-7.29H14V3M5 5h5v2H6.41l7.3 7.29-1.42 1.42-7.29-7.3V10H3V3h7v2H5v5H3V5Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}
