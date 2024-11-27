@@ -1,16 +1,21 @@
 /* Body styling */
 body, html {
     height: 100%;
+    width: 100%;
     background-color: #1a1a1a; /* Set a standard dark theme for the body */
     color: #d1d1d1; /* Light text color for better contrast */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Flexbox container */
 .container {
+    max-width: 100%; /* Restrict the container to the screen size */
     display: flex;
+    margin: 0 auto;
+    padding: 15px;
     flex-direction: column; /* Stack elements vertically */
     min-height: 100vh; /* Make the container cover the full viewport height */
 }
@@ -68,36 +73,23 @@ footer {
     font-size: 12px; /* Smaller font */
 }
 
-h1 {
+/* About Section */
+.about-page h1 {
     color: #d1d1d1; /* Bright titles */
     margin-bottom: 10px;
     padding-bottom: 5px;
+    line-height: 1.6;
 }
 
-.section h2 {
-    font-size: 1.6em;
-    color: #d1d1d1; /* Bright titles */
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-}
-
-.section h3 {
-    font-size: 1.2em;
-    color: #d1d1d1; /* Subsection titles */
-    margin-bottom: 5px;
-}
-
-.section p {
+.about-page p {
     font-size: 1.0em;
-}
-
-.section p i{
-    font-size: 0.8em;
+    line-height: 1.6;
 }
 
 /* work section */
 .section ul.work-section {
-    list-style-type: circle; /* Remove default bullets */
+    list-style-type: circle;
+    line-height: 1.6;
 }
 .section ul.work-section li {
     font-size: 0.9em;
@@ -106,6 +98,7 @@ h1 {
 /* skills section */
 .section ul.skill-section {
     list-style-type: circle;
+    line-height: 1.6;
 }
 
 .section ul.skill-section li {
@@ -147,12 +140,84 @@ h1 {
     text-decoration: underline; /* Underline on hover */
 }
 
-p, ul {
-    line-height: 1.6;
-}
-
+/* ako ka border line */
 hr {
     border: none;
     border-top: 1px solid #333; /* Subtle separator */
     margin: 20px 0;
+}
+
+/* responsive styling */
+@media (max-width: 1024px) {
+    nav, ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav, ul, li {
+        margin-right: 20px;
+    }
+
+    main {
+        max-width: 700px;
+    }
+
+    .contact-info ul {
+        flex-wrap: wrap;
+    }
+
+    .contact-info ul li {
+        flex: 1 1 45%; /* Allow each item to take half the width */
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px; /* Adjust padding for smaller screens */
+    }
+
+    nav ul li {
+        margin-right: 15px; /* Reduce spacing */
+    }
+
+    main {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .contact-info ul li {
+        flex: 1 1 100%; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .about-page h1 {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    .about-page p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+    nav ul {
+        flex-direction: row; /* Stack links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0 15px; /* Reduce margin */
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .contact-info ul li {
+        text-align: left; /* Align text to the left */
+    }
 }

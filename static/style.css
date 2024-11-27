@@ -148,3 +148,84 @@ footer {
 .content p {
     line-height: 1.6;
 }
+
+@media (max-width: 1024px) {
+    /* Adjust padding for the navbar */
+    nav {
+        padding: 15px 20px;
+    }
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    /* Reduce font sizes for headings and paragraphs */
+    .home-banner h1 {
+        font-size: 28px;
+    }
+    .home-banner p {
+        font-size: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* Resize the hero image */
+    .hero-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reduce overall padding and font sizes */
+    .home-banner {
+        padding: 50px 10px;
+    }
+    .home-banner h1 {
+        font-size: 24px;
+    }
+    .home-banner p {
+        font-size: 14px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Resize social icons */
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust layout for small screens */
+    .hero {
+        margin-top: 20px;
+    }
+
+    .home-banner h1 {
+        font-size: 20px;
+    }
+    .home-banner p {
+        font-size: 12px;
+    }
+
+    /* Resize hero image for very small screens */
+    .hero-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+    }
+}
+
