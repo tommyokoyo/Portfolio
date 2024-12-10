@@ -6,7 +6,22 @@
     <description>Recent content on Okoyo&#39;s Portofolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frida APIs</title>
+      <link>http://localhost:1313/blog/frida-apis/</link>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/frida-apis/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Opps! Couldn&amp;rsquo;t finish the content, bare with me now. :)&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding Frida</title>
+      <link>http://localhost:1313/blog/frida/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/frida/</guid>
+      <description>&lt;h3 id=&#34;what-is-frida&#34;&gt;What is Frida?&lt;/h3&gt;&#xA;&lt;p&gt;Frida is a powerful and versatile dynamic instrumentation toolkit that allow developers, security researchers, and reverse engineers to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Inspect applications and processes at runtime.&lt;/li&gt;&#xA;&lt;li&gt;Modify behaviour dynamically.&lt;/li&gt;&#xA;&lt;li&gt;Debug applications&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Think of it as a spy that can peek into an app&amp;rsquo;s internals, monitor what&amp;rsquo;s happening, or even change how the app behaves, without access to the app&amp;rsquo;s source code. It enables one to inject custom scripts into running processes, letting you interact with and manipulate the behaviour of the process or application in real-time.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>File Manager</title>
       <link>http://localhost:1313/projects/filemanager/</link>

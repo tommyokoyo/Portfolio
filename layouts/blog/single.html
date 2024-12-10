@@ -1,9 +1,9 @@
 {{ define "main" }}
-    <main class="blog-page">
-        <section>
-            <div class="content">
-                {{ .Content }}
-            </div>
-        </section>
-    </main>
+<article class="blog-post">
+    <a href="/blog" class="back-link">Back</a>
+    <h1>{{.Title}}</h1>
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+</article>
 {{ end }}
