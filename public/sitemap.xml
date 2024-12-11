@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/frida-apis/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/frida/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/filemanager/</loc>
   </url><url>
@@ -10,12 +20,6 @@
   </url><url>
     <loc>http://localhost:1313/projects/msimulator/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-  </url><url>
     <loc>http://localhost:1313/projects/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/ptrace/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/frida/</loc>
   </url>
 </urlset>
