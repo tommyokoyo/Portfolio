@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/frida-apis/</link>
       <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/frida-apis/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Opps! Couldn&amp;rsquo;t finish the content, bare with me now. :)&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;what-are-frida-apis&#34;&gt;What are Frida APIs?&lt;/h3&gt;&#xA;&lt;p&gt;They are part of the Frida dynamic instrumentation toolkit, they allow one to interact with and modify the behaviour of applications and processes at runtime. Think of them as tools to &amp;lsquo;inject&amp;rsquo; custom scripts into an application to monitor or manipulate its behaviour.&lt;/p&gt;&#xA;&lt;h4 id=&#34;core-concepts-of-frida-apis&#34;&gt;Core Concepts of Frida APIs&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Injection&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Frida allows you to inject Javascript code into running processes (like apps in android), they injected script can interact with the application&amp;rsquo;s memory, functions, and data in real time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Frida</title>
