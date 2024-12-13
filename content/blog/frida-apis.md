@@ -69,8 +69,8 @@ They are part of the Frida dynamic instrumentation toolkit, they allow one to in
 > 
 >   Interceptor.attach(systemCall, {
 >       onEnter: function(args) {
->           let variablePassed = Memory.readCString(args[0]);
->           console.log("Argument passed: " + variablePassed);
+>           let argPassed = Memory.readCString(args[0]);
+>           console.log("Argument passed: " + argPassed);
 >       },
 >       onLeave: function(retval) {
 >           console.log("Return value: " + retval);
@@ -79,6 +79,79 @@ They are part of the Frida dynamic instrumentation toolkit, they allow one to in
 > ``` 
 >
 3. **Java**
+> The `Java` API is used to work with Java code in Android applications. You can enumerate classes, hook methods, or call methods at runtime.
+> 
+>**Main Methods**
+> 
+> - `Java.perform()`: Executes a callback in the context of the Java runtime.
+> - `Java.use(className)`: Returns a wrapper for a Java class that you can interact with (call methods, access fields).
+> - `Java.enumerateLoadedClasses()`: Lists all loaded classes in the application.
+> - `Java.enumerateClassLoaders()`: Lists all class loaders, useful for accessing hidden classes.
+> - 'Java.choose(className, callback)': Finds all live instances of a given class.
+>
+> **Example:**
+>
+> Hook a method in a Java class:
+> ```javascript
+>   Java.perform(function() {
+>       let myClass = Java.use("com.example.MyClass");
+>       myClass.myMethod.implementation = function (arg1, arg2) {
+>           console.log("Original arg1: " + arg1 + ", arg2: " + arg2);
+>           return this.myMethod("newArg1, newArg2"); //call the method with new args
+>       }
+>   });
+> ``` 
+>
+> List all methods of a class:
+> 
+> ```javascript
+>   Java.perform(function() {
+>       let myClass = Java.use("com.example.MyClass");
+>       console.log(myClass.class.getMethods());
+>   });
+> ``` 
+> 
+> Access a static field of a class:
+> 
+> ```javascript
+>   Java.perform(function() {
+>       let myClass = Java.use("com.example.MyClass");
+>       console.log("Static field value: " + myClass.myStaticField.value);
+>   });
+> ``` 
 4. **Memory**
-5. **objC**
-6. **NativeFunction**
+> The `Memory` API is used to read, write and scan memory regions of a target process. It's useful for tasks like dumping or altering values directly in memory.
+>
+> **Main Methods**
+> 
+> - `Memory.read*()`: Reads data from a specific memory address.
+>   - `Memory.readUtf8Strings(address)`: Reads a null terminated UTF-8 string.
+>   - `Memory.readByteArray()`: Reads a raw byte array.
+> - `Memory.write*()`: Writes data to  a specific memory address.
+>   - `Memory.writeUtf8String(address, string)`: Writes a UTF-8 string.
+>   - `Memory.writeInt(address, value)`: Writes an integer.
+>
+> **Example:**
+>
+> Read and write to Memory:
+> ```javascript
+>   let baseAddress = Module.findBaseAddress("libnative-lib.so");
+>   let offset = 0x1234
+>   let address = baseAddress.add(offset);
+> 
+>   console.log("Original value: " + Memory.readInt(address));
+>   Memory.writeInt(address, 42); // Change value in memory
+>   console.log("Modified value: " + Memory.readInt(address));
+> ``` 
+>
+
+### How do these API work together?
+You can combine these APIs to perform complex tasks, for instance:
+- You can use the `Module` api to find the base address of a library or locate a function.
+- You can then combine it with the `Interceptor` to hook the function and modify its behaviour.
+- You can use `Memory` to manipulate or inspect the memory regions associated with the hooked function.
+- For Java code, you can use `Java` to hook Java methods in Android apps and inspect their interactions with native libraries.
+
+With Frida in your toolkit, no app is too sneaky, no function too hidden, and no memory too Untouchable. With great power comes great responsibility - and occasional crash.
+
+Happy hooking!
